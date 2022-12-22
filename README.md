@@ -11,6 +11,8 @@ Configuration:
 4. $ pip install -r requirements.txt
 5. modify settings.py DATABASES={} to a correct database that you have
 6. Make migrations
+7. Create super user in django
+8. Run server
 
 Folder distribution: 
 ucover_backend_api
