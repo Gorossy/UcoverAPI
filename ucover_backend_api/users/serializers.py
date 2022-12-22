@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from users.models.users import User
-
+#Modelo de creacion de usuario
 class RegisterUserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
@@ -14,6 +14,7 @@ class RegisterUserSerializer(serializers.ModelSerializer):
             instance.set_password(password)
         instance.save()
         return instance
+#Modelo de usuario para el viewset
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
