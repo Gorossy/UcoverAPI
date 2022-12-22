@@ -89,7 +89,7 @@ WSGI_APPLICATION = 'ucover_backend_api.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'Festa',
+        'NAME': 'Ucover',
         'USER': 'postgres',
         'PASSWORD': 'gorossy0987',
         'HOST': 'localhost',
@@ -153,4 +153,4 @@ SIMPLE_JWT = {
     'REFRESH_TOKEN_LIFETIME': timedelta(days=3),
 }
 
-#AUTH_USER_MODEL = 'users.User'
+AUTH_USER_MODEL = 'users.User'

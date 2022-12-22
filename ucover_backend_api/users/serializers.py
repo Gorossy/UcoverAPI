@@ -4,7 +4,7 @@ from users.models.users import User
 class RegisterUserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ['username', 'password']
+        fields = ['username', 'email', 'password']
         extra_kwargs = {'password': {'write_only': True}}
 
     def create(self, validated_data):
@@ -14,7 +14,7 @@ class RegisterUserSerializer(serializers.ModelSerializer):
             instance.set_password(password)
         instance.save()
         return instance
-class ClientSerializer(serializers.ModelSerializer):
+class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        exclude = ('id','Email_verified_at','Payment_method','created_at','updated_at','is_active','is_staff')
+        fields = ('username', 'email', 'first_name', 'last_name',"role", "is_staff", "is_active", "created_at", "updated_at")
