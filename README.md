@@ -9,6 +9,8 @@ Configuration:
 2. Create a virtual environment
 3. Activate the virtual environment 
 4. $ pip install -r requirements.txt
+5. modify settings.py DATABASES={} to a correct database that you have
+6. Make migrations
 
 Folder distribution: 
 ucover_backend_api
